@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="inParkingContext" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #00324D;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.InParkingController">
+   <children>
+      <ImageView fitHeight="468.0" fitWidth="752.0" opacity="0.7" pickOnBounds="true">
+         <image>
+            <Image url="@../accert/5026563.jpg" />
+         </image>
+      </ImageView>
+      <ComboBox fx:id="cmbInParking" layoutX="33.0" layoutY="92.0" prefHeight="31.0" prefWidth="206.0" promptText="In Parking" style="-fx-background-color: #5B9Bc4;">
+         <effect>
+            <ColorAdjust brightness="-0.18" contrast="0.2" />
+         </effect></ComboBox>
+      <Button fx:id="btnAddVehicle" layoutX="392.0" layoutY="92.0" mnemonicParsing="false" onAction="#AddVehidOnAction" prefHeight="31.0" prefWidth="141.0" style="-fx-background-color: #2980b9; -fx-background-radius: 90;" text="Add Vehicle" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Button>
+      <Button fx:id="btnAddDriver" layoutX="570.0" layoutY="92.0" mnemonicParsing="false" onAction="#AddDriverOnAction" prefHeight="31.0" prefWidth="141.0" style="-fx-background-color: #2980b9; -fx-background-radius: 90;" text="Add Driver" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Button>
+      <Button fx:id="btnLogout" layoutX="616.0" layoutY="27.0" mnemonicParsing="false" onAction="#LogoutOnAction" prefHeight="31.0" prefWidth="95.0" style="-fx-background-color: #298; -fx-background-radius: 90;" text="Log Out" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Button>
+      <TableView fx:id="tblInParking" layoutX="40.0" layoutY="162.0" opacity="0.65" prefHeight="290.0" prefWidth="674.0" style="-fx-background-color: #5B9Bc4;">
+         <columns>
+            <TableColumn fx:id="colVehiNo" prefWidth="131.0" text="Vehicle Number" />
+            <TableColumn fx:id="colVehiType" prefWidth="143.0" text="Vehicle Type" />
+            <TableColumn fx:id="colParkinhgSlot" prefWidth="173.0" text="Parking Slot" />
+            <TableColumn fx:id="colParkingTime" prefWidth="226.0" text="Parking Time" />
+         </columns>
+      </TableView>
+      <Separator layoutX="22.0" layoutY="55.0" opacity="0.52" prefHeight="6.0" prefWidth="322.0" style="-fx-background-color: #0046ae;" />
+      <Label layoutX="22.0" layoutY="14.0" prefHeight="42.0" prefWidth="206.0" text="Parking System" textFill="#0046ae">
+         <font>
+            <Font name="System Bold" size="27.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
